@@ -10,6 +10,7 @@ export const StatisticsSection = styled.section`
   overflow: hidden;
   border-radius: 10px;
   margin: 20px auto;
+  margin-top: 50px;
   color: #2f2f2f;
   -webkit-box-shadow: 2px 3px 14px 2px rgba(0, 0, 0, 0.41);
   box-shadow: 2px 3px 14px 2px rgba(0, 0, 0, 0.41);
