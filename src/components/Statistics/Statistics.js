@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   StatisticsSection,
   Title,
@@ -10,7 +11,7 @@ import {
 export default function Statistics({ stats, title }) {
   return (
     <StatisticsSection>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatsList>
         {stats.map((stat) => (
           <StatsItem key={stat.id}>
@@ -22,3 +23,12 @@ export default function Statistics({ stats, title }) {
     </StatisticsSection>
   );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stat: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
+};

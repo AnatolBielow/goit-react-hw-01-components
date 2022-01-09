@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { BsFillRecordFill } from "react-icons/bs";
 import { ListItem, Status, Avatar, FriendName } from "./FriendListItem.styled";
 
@@ -14,3 +16,9 @@ export default function FriendListItem({ friend }) {
     </ListItem>
   );
 }
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+};

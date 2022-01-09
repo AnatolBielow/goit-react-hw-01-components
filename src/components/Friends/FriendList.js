@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import FriendListItem from "./FriendListItem";
 import { List } from "./FriendList.styled";
 export default function FriendList({ friends }) {
@@ -9,3 +10,7 @@ export default function FriendList({ friends }) {
     </List>
   );
 }
+
+FriendList.propTypes = {
+  id: PropTypes.number,
+};
