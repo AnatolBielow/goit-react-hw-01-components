@@ -25,10 +25,6 @@ export default function Statistics({ stats, title }) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string,
-  stat: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }),
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.array.isRequired,
 };

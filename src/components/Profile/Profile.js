@@ -13,6 +13,7 @@ import {
 
 export default function Profile(props) {
   const { avatar, username, tag, location, stats } = props;
+  const { followers, views, likes } = stats;
 
   return (
     <Card>
@@ -26,15 +27,15 @@ export default function Profile(props) {
       <Stats>
         <li>
           <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <Quantity>{followers}</Quantity>
         </li>
         <li>
           <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <Quantity>{views}</Quantity>
         </li>
         <li>
           <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <Quantity>{likes}</Quantity>
         </li>
       </Stats>
     </Card>
